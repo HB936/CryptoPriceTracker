@@ -3,7 +3,7 @@ A React-based real-time cryptocurrency price tracker that displays the latest pr
 
 
 
-*********************************************************************SETUP INSTRUCTIONS**************************************************************************************
+**SETUP INSTRUCTIONS**
 
 1. Clone the Repository
 
@@ -33,7 +33,9 @@ RUN USING: npm run dev
 
 
 
-***************************************************************************************Features***********************************************************************************
+**Features**
+
+
 Real-Time Data: Displays cryptocurrency data with live updates.
 
 Charts: Visual representation of price changes over time using dynamic charts.
