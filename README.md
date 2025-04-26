@@ -1,54 +1,86 @@
-# React + TypeScript + Vite
+Real-Time Crypto Price Tracker
+A React-based real-time cryptocurrency price tracker that displays the latest price, percentage changes (1 hour, 24 hours, 7 days), market capitalization, volume, circulating supply, and charts for top cryptocurrencies. The project utilizes Redux Toolkit for state management, React, TypeScript, and TailwindCSS for styling.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*********************************************************************SETUP INSTRUCTIONS**************************************************************************************
 
-## Expanding the ESLint configuration
+1. Clone the Repository
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+git clone https://github.com/your-username/crypto-price-tracker.git
+cd crypto-price-tracker
+Replace your-username with your GitHub username if needed.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2. Install Node.js and npm
+Make sure you have Node.js and npm installed:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Check versions:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+node -v
+npm -v
+If not installed, Download Node.js.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+3. Install react using vite:
+write: npm createvite@latest . -- --template=react
+select react<typescript
+
+4. Install all dependencies: 
+run: npm install
+
+5. Run the project and observe!
+RUN USING: npm run dev
+
+
+
+
+***************************************************************************************Features***********************************************************************************
+Real-Time Data: Displays cryptocurrency data with live updates.
+
+Charts: Visual representation of price changes over time using dynamic charts.
+
+State Management: Uses Redux Toolkit for managing state (crypto assets and filter).
+
+Responsive: Fully responsive design with TailwindCSS.
+
+Filters: Filter cryptocurrencies by "All," "Top Gainers," and "Top Losers."
+
+LocalStorage Support: Persist the filter preference using localStorage.
+
+Chart Component: Displays a dynamic chart showing 7-day price trends.
+
+Technologies Used
+React: Frontend UI library.
+
+Redux Toolkit: State management.
+
+TypeScript: For type safety.
+
+TailwindCSS: For utility-first CSS styling.
+
+Chart.js: For rendering dynamic charts (price trends).
+
+React-Chartjs-2: React wrapper for Chart.js.
+
+***************************************************************************Project Structure**************************************************************************************
+plaintext
+Copy
+Edit
+├── public/
+│   ├── index.html
+│   ├── ...
+├── src/
+│   ├── components/
+│   │   ├── ChartComponent.tsx          # Renders a chart using Chart.js
+│   │   ├── CryptoRow.tsx              # Displays a single crypto row
+│   │   └── ...
+│   ├── data/
+│   │   ├── sampleData.ts              # Sample cryptocurrency data
+│   ├── features/
+│   │   ├── cryptoSlice.ts             # Redux slice for crypto data
+│   ├── App.tsx                        # Main app component
+│   ├── index.tsx                      # Entry point for React app
+│   └── ...
+├── tailwind.config.js                 # TailwindCSS configuration
+├── tsconfig.json                      # TypeScript configuration
+├── package.json                       # Project dependencies
+└── README.md                          # Project README
