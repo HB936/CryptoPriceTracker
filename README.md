@@ -22,6 +22,7 @@ If not installed, Download Node.js.
 
 3. Install react using vite:
 write: npm createvite@latest . -- --template=react
+
 select react<typescript
 
 4. Install all dependencies: 
